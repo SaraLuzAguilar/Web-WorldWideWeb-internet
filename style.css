@@ -7,7 +7,7 @@ body {
   color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-image: url('/img/image.jpg');
+  background-image: url('img/image.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
