@@ -1,0 +1,239 @@
+/* style.css actualizado con mejoras solicitadas */
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-image: url('/img/image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+section, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* HERO SECTION */
+header {
+  text-align: center;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3.5em;
+  animation: slideInTop 1.2s ease;
+}
+
+header p {
+  font-size: 1.3em;
+  color: #ccc;
+  animation: fadeIn 2s ease;
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #D1A266;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color:#fbcf97
+}
+
+section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  max-width: 960px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  animation: fadeUp 1.5s ease both;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+section.scroll-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+section.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.components {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.component-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.4s ease;
+  backdrop-filter: blur(6px);
+}
+
+.component-card:hover {
+  transform: scale(1.05);
+}
+
+.timeline {
+  max-width: 700px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  margin: 80px auto;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+#timeline-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+#timeline-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+}
+
+#timeline-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ccc;
+}
+
+button#load-next-year, button#load-prev-year {
+  margin: 12px 8px 0;
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#load-next-year:hover, button#load-prev-year:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #aaa;
+  font-size: 0.9em;
+  background: transparent;
+}
+a{
+    color:#D1A266;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .text-container {
+    margin: 40px 20px;
+    padding: 30px;
+  }
+
+  .timeline {
+    margin: 40px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+}
