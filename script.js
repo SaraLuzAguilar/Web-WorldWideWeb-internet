@@ -32,15 +32,15 @@ const nextBtn = document.getElementById("load-next-year");
 const prevBtn = document.getElementById("load-prev-year");
 
 const events = [
-  "1969 – ARPANET is created",
-  "1973 – First transatlantic connection",
-  "1983 – TCP/IP becomes the standard",
-  "1989 – Proposal of the World Wide Web",
-  "1991 – First website goes live",
+  "1969 – ARPANET is created, the foundation of the Internet",
+  "1973 – First transatlantic connection (UK and Norway join ARPANET)",
+  "1983 – TCP/IP becomes the standard protocol for the Internet",
+  "1989 – Tim Berners-Lee proposes the World Wide Web",
+  "1991 – The first website goes live",
   "1998 – Google is founded",
   "2004 – Facebook is launched",
-  "2007 – iPhone introduces mobile web revolution",
-  "2010 – HTML5 becomes a standard",
+  "2007 – The iPhone launches and revolutionizes mobile web access",
+  "2014 – HTML5 becomes an official W3C standard",
 ];
 
 let currentIndex = 0;
